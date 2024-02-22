@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admission Form</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            margin: 20px;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        legend {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #777;
+            border-radius: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #27ae60;
+        }
+
+        .qualification-fieldset {
+            margin-top: 20px;
+        }
+
+        .form-buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <img height="50px" src="https://isu.ac.in/B-Tech-CSE/images/logo/ISU-LOGO-wite.webp" alt="University Logo" />
+    <h3 style="color: #3498db;">Join India's best B.Tech CSE program</h3>
+    <form>
+        <fieldset>
+            <legend><b>Personal Information</b></legend>
+
+            <label for="title">Title:</label>
+            <select id="title" name="title">
+                <option value="Mr.">Mr.</option>
+                <option value="Ms.">Ms.</option>
+                <option value="Mrs.">Mrs.</option>
+            </select>
+
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="e.g., John">
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="e.g., Wick">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Locality, City - Pincode."></textarea>
+        </fieldset>
+
+        <fieldset class="qualification-fieldset">
+            <legend><b>University Exam</b></legend>
+
+            <label for="exam_name">Exam Name:</label>
+            <input type="text" id="exam_name" name="exam_name" placeholder="e.g., Entrance Exam 2024">
+
+            <label for="exam_score">Exam Score:</label>
+            <input type="text" id="exam_score" name="exam_score" placeholder="e.g., 150/200">
+
+            <label for="exam_rank">Exam Rank:</label>
+            <input type="text" id="exam_rank" name="exam_rank" placeholder="e.g., 256">
+        </fieldset>
+
+        <fieldset class="qualification-fieldset">
+            <legend><b>Qualifications</b></legend>
+
+            <label for="qualification_degree">Degree:</label>
+            <input type="text" id="qualification_degree" name="qualification_degree" placeholder="e.g., Bachelor of Science">
+
+            <label for="qualification_year">Year of Passing:</label>
+            <input type="text" id="qualification_year" name="qualification_year" placeholder="e.g., 2022">
+
+            <label for="qualification_percentage">Percentage:</label>
+            <input type="text" id="qualification_percentage" name="qualification_percentage" placeholder="e.g., 85%">
+        </fieldset>
+
+        <div class="form-buttons">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+
+</html>
